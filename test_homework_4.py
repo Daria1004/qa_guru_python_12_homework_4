@@ -59,7 +59,7 @@ def test_random_list():
     import random
     from random import randint, shuffle
 
-    # # без цикла
+    # без цикла
     l = [randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100)]
     print("")
     print(l)
