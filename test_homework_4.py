@@ -1,4 +1,5 @@
 import math
+from random import randint
 
 
 def test_greeting():
@@ -44,7 +45,7 @@ def test_circle():
     print(area)
     assert area == 1661.9025137490005
 
-    # # TODO сосчитайте длину окружности
+    # TODO сосчитайте длину окружности
     length = 2*(math.pi)*r
     print(length)
     assert length == 144.51326206513048
@@ -56,21 +57,16 @@ def test_random_list():
     """
     # TODO создайте список
 
-    import random
-    from random import randint, shuffle
 
     # без цикла
     l = [randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100), randint(1, 100)]
-    print("")
-    print(l)
     l.sort()
-    print(l)
+    print(f"\n{l}")
     assert len(l) == 10
     assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
 
     # с циклом
     l = [randint(1, 100) for i in range(10)]
-    print(f"\n{l}")
     l.sort()
     print(f"\n{l}")
     assert len(l) == 10
@@ -84,7 +80,7 @@ def test_unique_elements():
 
     # TODO удалите повторяющиеся элементы
     l = list(set(l))
-
+    print(l)
     assert isinstance(l, list)
     assert len(l) == 10
     assert l == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
